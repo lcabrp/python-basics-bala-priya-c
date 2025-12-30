@@ -20,7 +20,7 @@ np.random.seed(42)
 
 sales_data = {
     'transaction_id': range(1, num_rows + 1),
-    'date': [datetime(2024, 1, 1) + timedelta(days=random.randint(0, 365)) 
+    'date': [datetime(2024, 1, 1) + timedelta(days=random.randint(0, 365))
              for _ in range(num_rows)],
     'revenue': np.random.uniform(10, 1000, num_rows).round(2),
     'product_id': np.random.randint(1, 1000, num_rows),
@@ -70,7 +70,7 @@ ratings_data = {
     'user_id': np.random.randint(1, 100000, num_ratings),
     'product_id': np.random.randint(1, 10000, num_ratings),
     'rating': np.random.randint(1, 6, num_ratings),  # 1-5 stars
-    'timestamp': [datetime(2024, 1, 1) + timedelta(days=random.randint(0, 365)) 
+    'timestamp': [datetime(2024, 1, 1) + timedelta(days=random.randint(0, 365))
                   for _ in range(num_ratings)]
 }
 
@@ -138,7 +138,7 @@ orders_data = {
     'quantity': np.random.randint(1, 10, num_orders),
     'price': np.random.uniform(10, 500, num_orders).round(2),
     'customer_id': np.random.randint(1, 100000, num_orders),
-    'order_date': [datetime(2024, 1, 1) + timedelta(days=random.randint(0, 365)) 
+    'order_date': [datetime(2024, 1, 1) + timedelta(days=random.randint(0, 365))
                    for _ in range(num_orders)]
 }
 
@@ -172,3 +172,4 @@ for filename in files_created:
 
 print("="*60)
 print(f"Total size: {total_size:.1f} MB")
+print("\nYou can now run the tutorial examples with these files!")
